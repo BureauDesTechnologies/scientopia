@@ -1,4 +1,5 @@
 import pygame
+import gui
 
 from scene import SceneManager
 from game import Game
@@ -11,8 +12,9 @@ def main():
     # Screen related infos
     desktop_size = pygame.Vector2(pygame.display.get_desktop_sizes()[0])
     screen_size = desktop_size * 2 / 3
+
     pygame.display.set_mode(
-        [screen_size.x, screen_size.y], flags=pygame.RESIZABLE + pygame.SCALED, vsync=1
+        [screen_size.x, screen_size.y], vsync=1, flags=pygame.SCALED
     )
     clock = pygame.Clock()
 
@@ -39,7 +41,7 @@ def main():
 
             elif event.type == pygame.KEYDOWN:
                 if event.key == pygame.K_F11:
-                    pygame.display.toggle_fullscreen()
+                    pygame.display.toggle_fullscreen()  
 
         pygame.display.flip()
 

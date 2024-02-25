@@ -1,0 +1,16 @@
+{
+    "objects":[
+        {
+            "id":0,
+            "src":"./assets/objects/tree1.png",
+            "center":[25, 50],
+            "width":[1, 0]
+        },
+        {
+            "id":1,
+            "src":"./assets/objects/tree2.png",
+            "center":[25, 50],
+            "width":[1, 0]
+        }
+    ]
+}

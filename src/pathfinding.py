@@ -47,6 +47,8 @@ def find_way(start_pos, end_pos, blocks_pos : list[tuple]):
 
     if not (start_pos[0] - 18 <= end_pos[0] < start_pos[0] + 18) or not (start_pos[1] - 10 <= end_pos[1] < start_pos[1] + 10):
         return PathData()
+    elif end_pos in blocks_pos:
+        return PathData()
 
     opened_cell = []
     opened_cell_pos = []

@@ -113,10 +113,15 @@ class Player:
 
         if direction:
             direction.normalize_ip()
+    
+    def prepare_drawing(self):
+        pos = pygame.Vector2(self.hitbox.topleft)
+        image = self.image if not self.animation else self.animation.blit_ready()
+        return [image, pos, pygame.Vector2(self.hitbox.midbottom)]
+
 
     def draw(self, camera: Camera):
-        pos = pygame.Vector2(self.hitbox.topleft) - pygame.Vector2(camera.rect.topleft)
+        blit_data = self.prepare_drawing()[:2]
+        blit_data[1] -= pygame.Vector2(camera.rect.topleft)
 
-        image = self.image if not self.animation else self.animation.blit_ready()
-
-        camera.draw([(image, round(pos))])
+        camera.draw([tuple(blit_data)])

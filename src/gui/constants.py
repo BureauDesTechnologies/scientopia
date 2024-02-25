@@ -1,0 +1,14 @@
+from pygame.event import custom_type
+
+UI_BUTTONPRESSED = custom_type()
+UI_BUTTONRELEASED = custom_type()
+UI_BUTTONCLICKED = custom_type()
+UI_BUTTONHOVERED = custom_type()
+UI_ANIMATIONENDED = custom_type()
+
+UI_RESSOURCE_COLOR = 0
+UI_RESSOURCE_IMAGE = 1
+UI_RESSOURCE_FONT = 2
+UI_RESSOURCE_SFX = 3
+
+POSITION_SCALE_FACTOR = 1.0

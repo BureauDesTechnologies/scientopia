@@ -1,5 +1,4 @@
 pygame-ce==2.4.0
 opensimplex
 numpy
-pygame_gui
 gif-pygame
